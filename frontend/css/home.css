@@ -101,7 +101,7 @@ header .container {
 }
 
 .search-container {
-  max-width: 550px;
+  max-width:100%;
   margin: 32px 0;
 }
 
@@ -490,29 +490,6 @@ footer {
 
   .hero-image img {
     max-width: 280px;
-  }
-
-  /* Search Bar Stacked on Mobile */
-  .search-container {
-    margin: 24px 0;
-  }
-
-  .search-container .input-group {
-    flex-direction: column;
-    padding: 12px;
-    border-radius: var(--radius-md);
-    gap: 10px;
-  }
-
-  .search-container .input-group i {
-    display: none;
-  }
-
-  .search-container .input {
-    width: 100%;
-    text-align: center;
-    padding: 14px 12px;
-    font-size: 0.95rem;
   }
 
   .search-container .input::placeholder {

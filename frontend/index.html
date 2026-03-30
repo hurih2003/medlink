@@ -35,7 +35,9 @@
             <li><a href="#Features">Features</a></li>
             <li><a href="#How-Work">How It Works</a></li>
             <li class="mobile-auth-link"><a href="login.html">Log in</a></li>
-            <li class="mobile-auth-link"><a href="register.html">Register</a></li>
+            <li class="mobile-auth-link">
+              <a href="register.html">Register</a>
+            </li>
           </ul>
         </nav>
         <div class="auth-buttons">
@@ -64,22 +66,19 @@
             stock availability, allowing you to locate and reserve your
             prescriptions in seconds.
           </p>
-
-          <div class="search-container">
-            <div class="input-group">
-              <i class="fas fa-search"></i>
-              <input
-                type="text"
-                class="input"
-                placeholder="Enter medicine name (e.g. Paracetamol)..."
-              />
-              <button class="btn btn-primary">Search Now</button>
+         
+            <div class="search-container">
+              <div class="input-group">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter medicine name (e.g. Paracetamol)..."
+                />
+                <button class="btn btn-primary">Search Now</button>
+              </div>
             </div>
-          </div>
-
-          <div class="flex gap-md">
-            <a href="#" class="btn btn-outline">Request Missing Medicine</a>
-          </div>
+          
         </div>
         <div class="hero-image">
           <img src="images/hero-machine.png" alt="Smart Pharmacy Machine" />
@@ -298,16 +297,11 @@
               <li><a href="#">Cookie Policy</a></li>
               <li><a href="#">Data Security</a></li>
             </ul>
-            
           </div>
           <div>
             <h4 class="footer-heading">Stay Updated</h4>
             <p>Subscribe to get medical alerts and platform updates.</p>
-            <a
-              href="register.html"
-              class="btn btn-primary"
-              >Enjoy MedLink</a
-            >
+            <a href="register.html" class="btn btn-primary">Enjoy MedLink</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -323,22 +317,22 @@
 
     <script>
       // Mobile menu toggle for home page
-      const homeMenuBtn = document.getElementById('homeMenuBtn');
-      const homeNavLinks = document.getElementById('homeNavLinks');
+      const homeMenuBtn = document.getElementById("homeMenuBtn");
+      const homeNavLinks = document.getElementById("homeNavLinks");
       if (homeMenuBtn && homeNavLinks) {
-        homeMenuBtn.addEventListener('click', () => {
-          homeNavLinks.classList.toggle('active');
-          const icon = homeMenuBtn.querySelector('i');
-          icon.classList.toggle('fa-bars');
-          icon.classList.toggle('fa-times');
+        homeMenuBtn.addEventListener("click", () => {
+          homeNavLinks.classList.toggle("active");
+          const icon = homeMenuBtn.querySelector("i");
+          icon.classList.toggle("fa-bars");
+          icon.classList.toggle("fa-times");
         });
         // Close menu when a link is clicked
-        homeNavLinks.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            homeNavLinks.classList.remove('active');
-            const icon = homeMenuBtn.querySelector('i');
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
+        homeNavLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            homeNavLinks.classList.remove("active");
+            const icon = homeMenuBtn.querySelector("i");
+            icon.classList.add("fa-bars");
+            icon.classList.remove("fa-times");
           });
         });
       }

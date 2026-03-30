@@ -947,17 +947,18 @@ body {
    RESPONSIVE - Mobile (768px)
    =================================================== */
 @media (max-width: 768px) {
+  /* Reset negative margin for all large search bars on mobile by default */
   .search-container-large {
     flex-direction: column;
     padding: 16px;
     border-radius: var(--radius-lg);
     gap: 12px;
-    margin-top: 0; /* Reset default margin, apply specifically when needed */
+    margin-top: 0 !important; /* Force reset unless specifically inside hero */
   }
 
   /* Only apply negative margin for the hero search that overlaps the banner */
   .search-section .search-container-large {
-    margin-top: -30px;
+    margin-top: -30px !important;
   }
 
   .search-icon {
@@ -965,14 +966,17 @@ body {
   }
   
   .search-input-large {
-    padding: 12px 8px;
+    padding: 14px 8px; /* Slightly more padding for better centering */
     text-align: center;
     width: 100%;
     font-size: 1rem;
+    height: auto;
+    line-height: normal; /* Ensure browser doesn't cut off text */
   }
 
   .search-input-large::placeholder {
     font-size: 0.9rem;
+    line-height: normal;
   }
   
   .modern-btn {
@@ -1086,15 +1090,24 @@ body {
     cursor: pointer;
   }
 
-  /* Inventory search full width and spacing */
+  /* Inventory search full width and spacing - no overlap with heading */
   .inventory-search {
-    min-width: auto;
+    margin-top: 20px !important; /* Explicitly separate from heading */
     width: 100%;
+    padding: 16px;
+  }
+
+  /* Add space to section header flex when columns stack */
+  .section-header-flex {
+    margin-bottom: 32px;
+    gap: 12px;
     flex-direction: column;
-    padding: 12px;
-    border-radius: var(--radius-lg);
-    gap: 10px;
-    margin-top: 10px; /* Add space between heading and search */
+    align-items: flex-start;
+  }
+
+  .section-header-flex h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
   }
 
   .inventory-search .search-icon {
@@ -1185,9 +1198,11 @@ body {
   }
 
   .floating-action {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+    top: 10px;
+    right: 10px;
   }
 
   .card-image-wrapper {
