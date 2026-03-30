@@ -52,7 +52,13 @@
 
     <main>
       <!-- Hero Section -->
-      <section id="Home" class="hero container">
+      <section id="Home" class="hero hero-centered container">
+        <div class="hero-bg-blobs">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+        </div>
+        
         <div class="hero-content">
           <div class="badge badge-accent">
             <i class="fas fa-heart"></i> Trusted by 5,000+ Pharmacies
@@ -61,27 +67,29 @@
             Find Your <span>Medicine</span><br />
             Easily and Quickly
           </h1>
-          <p>
+          <p class="hero-subtitle">
             Stop wandering between pharmacies. MedLink connects you to real-time
             stock availability, allowing you to locate and reserve your
             prescriptions in seconds.
           </p>
          
-            <div class="search-container">
-              <div class="input-group">
-                <i class="fas fa-search"></i>
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Enter medicine name (e.g. Paracetamol)..."
-                />
-                <button class="btn btn-primary">Search Now</button>
-              </div>
+          <div class="search-container glass-search">
+            <div class="input-group">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter medicine name (e.g. Paracetamol)..."
+              />
+              <button class="btn btn-primary">Search Now</button>
             </div>
-          
-        </div>
-        <div class="hero-image">
-          <img src="images/hero-machine.png" alt="Smart Pharmacy Machine" />
+          </div>
+
+          <div class="hero-badges">
+            <div class="h-badge"><i class="fas fa-bolt"></i> Fast Search</div>
+            <div class="h-badge"><i class="fas fa-shield-alt"></i> Secure Data</div>
+            <div class="h-badge"><i class="fas fa-clock"></i> 24/7 Availability</div>
+          </div>
         </div>
       </section>
 

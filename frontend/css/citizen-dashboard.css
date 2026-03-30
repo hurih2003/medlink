@@ -68,22 +68,17 @@ body {
 .icon-btn {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-card);
   color: var(--text-muted);
   font-size: 1.25rem;
   transition: var(--transition);
-  border: 1px solid var(--border);
   flex-shrink: 0;
 }
 
 .icon-btn:hover {
-  background: #fdf2f2;
   color: var(--danger);
-  border-color: #fde8e8;
 }
 
 .profile-dropdown {
@@ -216,7 +211,7 @@ body {
 }
 
 .welcome-text h1 span {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .welcome-text .subtitle {
@@ -971,7 +966,7 @@ body {
     width: 100%;
     font-size: 1rem;
     height: auto;
-    line-height: normal; /* Ensure browser doesn't cut off text */
+    line-height: normal;/*  Ensure browser doesn't cut off text */
   }
 
   .search-input-large::placeholder {
